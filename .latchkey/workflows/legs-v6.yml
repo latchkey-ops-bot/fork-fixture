@@ -1,0 +1,10 @@
+on:
+  pull_request:
+    branches: ['legs/v6-base']
+jobs:
+  mapped:
+    runs-on: small
+    environment:
+      main: production
+    steps:
+      - run: echo "mapped for $LATCHKEY_CI_BASE_REF"
